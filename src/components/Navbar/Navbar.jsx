@@ -46,9 +46,9 @@ const Navbar = () => {
         ref={navbarSize.ref}
         className="fixed flex justify-between items-center rounded-[0_0_2.5rem_2.5rem] bg-black/30 backdrop-blur-lg w-screen min-h-32 px-16 z-10"
       >
-        <div>
+        <Link to="/">
           <img className="h-24" src="/images/logo.png" alt="logo" />
-        </div>
+        </Link>
         <div className="">
           <button
             onClick={() => setIsOpen((prev) => !prev)}
