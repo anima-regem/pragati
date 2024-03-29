@@ -1,8 +1,10 @@
-import HomePage from "./pages/HomePage"
+// import HomePage from "./pages/HomePage"
+import Regsitration from "./pages/Registration";
 
 const App = () => {
     return(
-        <HomePage/>
+        // <HomePage/>
+        <Regsitration/>
     )
 }
 
