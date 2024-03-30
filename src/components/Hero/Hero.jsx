@@ -14,7 +14,7 @@ const Hero = () => {
             libreated union presents
           </h1>
           <h1 className="text-5xl text-white font-black m-5 lg:text-8xl">
-            pragati'24
+            PRAGATI'24
           </h1>
           <h2 className="text-3xl text-white opacity-75 font-bold m-5 mt-10 lg:text-5xl">
             APRIL 18 | 19 | 20
