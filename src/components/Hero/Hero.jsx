@@ -17,7 +17,7 @@ const Hero = () => {
             IS HERE!!
           </h1>
           <h2 className="text-3xl text-white opacity-75 font-bold m-5 mt-10 lg:text-5xl">
-            APRIL 21 | 22 | 23
+            APRIL 18 | 19 | 20
           </h2>
         </span>
         <Link to="/register" className="reg mt-5 ml-5 ">
