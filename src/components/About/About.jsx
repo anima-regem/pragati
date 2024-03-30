@@ -9,7 +9,7 @@ const About = () => {
                         <h1 className='text-6xl w-min text-white font-bold m-5 underlined-text'>ABOUT</h1>
                     </span>
                     <p className='text-md text-white opacity-75 font-light m-5'>
-                        A fully fledged 5 day fest with various competition and proshows, and also several workshops and events as pre events of pragati focused on arts and culture, pragati will become one of the biggest cultural fest in GECW. <br /> GECW celebrating 25<sup>th</sup> anniversary, we aim to organize pragati in the most marvelous and ambitious way, making it reach the epitome of its legacy and set a whole new standart for culture fest held in Kerala. <br /> With the numerous events packed with lof of alluring experience and a large crowd, our vision for pragati 25 is here to raise the bar to and acgieve new heights in the light of 25<sup>th</sup> anniversary.
+                        A fully fledged 5 day fest with various competition and proshows, and also several workshops and events as pre events of pragati focused on arts and culture, pragati will become one of the biggest cultural fest in GECW. <br /> GECW celebrating 25<sup>th</sup> anniversary, we aim to organize pragati in the most marvelous and ambitious way, making it reach the epitome of its legacy and set a whole new standart for culture fest held in Kerala. <br /> With the numerous events packed with lof of alluring experience and a large crowd, our vision for pragati 24 is here to raise the bar to and achieve new heights in the light of 25<sup>th</sup> anniversary.
                     </p>
                 </span>
             </div>

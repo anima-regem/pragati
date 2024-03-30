@@ -42,7 +42,7 @@ const IndividualRegistrationForm = () => {
     return (
         <>
             <div className="flex flex-col pt-8 pr-8 pl-8 pb-0 w-full justify-center items-center">
-                <input type="text" placeholder="Enter Name (in CAPs)" className="input w-full max-w-xs bg-[#2D2D2D] mt-5 mb-5" />
+                <input type="text" placeholder="Name (in CAPs)" className="input w-full max-w-xs bg-[#2D2D2D] mt-5 mb-5" />
                 <input type="phone" placeholder="Phone" className="input w-full max-w-xs bg-[#2D2D2D] mb-5" />
                 <input type="email" placeholder="College Mail" className="input w-full max-w-xs bg-[#2D2D2D] mb-5" />
                 <input type="text" placeholder="Department" className="input w-full max-w-xs bg-[#2D2D2D] mb-5" />
