@@ -13,11 +13,11 @@ const links = [
   },
   {
     label: "Events",
-    url: "/events",
+    url: "/",
   },
   {
     label: "Guest",
-    url: "/guest",
+    url: "/",
   },
 ];
 
@@ -44,10 +44,10 @@ const Navbar = () => {
     <>
       <div
         ref={navbarSize.ref}
-        className="fixed flex justify-between items-center rounded-[0_0_2.5rem_2.5rem] bg-black/30 backdrop-blur-lg w-screen min-h-32 px-16 z-10"
+        className="fixed flex justify-between items-center bg-black/30 backdrop-blur-lg w-screen min-h-24 px-10 z-10 lg:rounded-[0_0_2.5rem_2.5rem] lg:px-20"
       >
         <Link to="/">
-          <img className="h-24" src="/images/logo.png" alt="logo" />
+          <img className="h-14" src="/images/logo.png" alt="logo" />
         </Link>
         <div className="">
           <button
@@ -65,6 +65,7 @@ const Navbar = () => {
                 active={location.pathname === link.url}
               />
             ))}
+
           </div>
         </div>
       </div>
@@ -86,7 +87,13 @@ const Navbar = () => {
               active={location.pathname === link.url}
             />
           ))}
+
+          <Link to="/register" className="reg mt-5 ml-5">
+            Register Now <i className="fas fa-arrow-right"></i>
+          </Link>
+
         </div>
+
       </motion.div>
     </>
   );
@@ -96,7 +103,7 @@ function LinkItem({ label, url, active }) {
   return (
     <Link
       to={url}
-      className="text-white font-semibold mx-4 relative text-2xl w-fit"
+      className="text-white font-semibold mx-4 relative text-md w-fit"
     >
       {label}
       {active && (

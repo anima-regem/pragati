@@ -51,7 +51,7 @@ const IndividualRegistrationForm = () => {
             <div className="flex flex-col p-8 pt-0 w-full">
                 {/* Input fields */}
                 <div className="form-control">
-                    <label className="label cursor-pointer flex flex-col">
+                    <label className="label cursor-pointer flex flex-row flex-wrap">
                         {individualEvents.map((event, index) => (
                             <div key={index} className="flex flex-row justify-between items-center w-72">
                                 <span className="label-text p-2">{event}</span>

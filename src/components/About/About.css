@@ -1,0 +1,17 @@
+.underlined-text {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .underlined-text::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0.15em; /* Adjust the distance from the bottom */
+    width: 100%;
+    height: 0.4em; /* Adjust the underline thickness */
+    z-index: -1;
+    background-color: #DE461C;
+    transform-origin: bottom; /* Make the underline scale from the bottom */
+    transform: scaleX(1) scaleY(0.75); /* Scale the underline vertically */
+  }
