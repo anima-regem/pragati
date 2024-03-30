@@ -10,10 +10,10 @@ const Hero = () => {
       </div>
       <div className="h-screen w-screen flex flex-col justify-center items-start ml-2 lg:ml-32 sm:ml-0 md:ml-0">
         <span className="">
-          <h1 className="text-xl text-white font-bold m-5 lg:text-3xl">
+          <h1 className="text-lg text-white font-bold m-5 lg:text-3xl">
             libreated union presents
           </h1>
-          <h1 className="text-5xl text-white font-black m-5 lg:text-8xl">
+          <h1 className="text-3xl text-white font-black m-5 lg:text-8xl">
             PRAGATI'24
           </h1>
           <h2 className="text-3xl text-white opacity-75 font-bold m-5 mt-10 lg:text-5xl">
