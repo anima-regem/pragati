@@ -42,7 +42,11 @@ const IndividualRegistrationForm = () => {
         setIsLoading(true);
 
         if (name === '' || phone === '' || mail === '' || department === '' || semester === '' || !mail.endsWith('@gecwyd.ac.in')) {
-            alert('Please fill all the fields properly.');
+            setMessage("Please fill all the fields correctly.");
+            setShowError(true);
+
+            setIsLoading(false);
+
             return;
         }
 
@@ -89,29 +93,40 @@ const IndividualRegistrationForm = () => {
                 <div className="form-control">
                     <label className="label cursor-pointer flex flex-row flex-wrap">
                         {individualEvents.map((event, index) => (
-                            <div key={index} className="flex flex-row justify-between items-center w-72">
-                                <span className="label-text p-2">{event}</span>
+                            <div key={`id${index}`} className="flex flex-row justify-between items-center w-72">
+                                {/* Generate a unique ID for each input using the event name and index */}
+                                <label key={`il${index}`} htmlFor={`individual-${index}`} className="label-text p-2 cursor-pointer">{event}</label>
+
                                 <input
+                                    key={`ii${index}`}
+                                    id={`individual-${index}`} // Ensure this results in a unique ID
                                     type="checkbox"
                                     value={event}
                                     checked={selectedIndividualEvents.includes(event)}
                                     onChange={handleIndividualCheck}
                                     className="checkbox"
                                 />
+                                {/* Use htmlFor to link the label to the input */}
                             </div>
                         ))}
                         {literacyEvents.map((event, index) => (
-                            <div key={index} className="flex flex-row justify-between items-center w-72">
-                                <span className="label-text p-2">{event}</span>
+                            <div key={`ld${index}`} className="flex flex-row justify-between items-center w-72">
+                                {/* Similarly, generate a unique ID for each input */}
+                                <label key={`ll${index}`} htmlFor={`literacy-${index}`} className="label-text p-2 cursor-pointer">{event}</label>
+
                                 <input
+                                    key={`li${index}`}
+                                    id={`literacy-${index}`} // Ensure this results in a unique ID
                                     type="checkbox"
                                     value={event}
                                     checked={selectedLiteracyEvents.includes(event)}
                                     onChange={handleLiteracyCheck}
                                     className="checkbox"
                                 />
+                                {/* Link the label to the input */}
                             </div>
                         ))}
+
                     </label>
                 </div>
 
@@ -124,7 +139,7 @@ const IndividualRegistrationForm = () => {
             </div>
             <dialog id="show_error" className="modal ">
                 <div className="modal-box bg-[#2D2D2D]">
-                    <form method="dialog ">
+                    <form method="dialog">
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
                     <h3 className="font-bold text-lg">Limit Reached</h3>

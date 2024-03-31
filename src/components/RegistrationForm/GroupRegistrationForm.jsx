@@ -29,7 +29,11 @@ const GroupRegistrationForm = () => {
         setIsLoading(true);
 
         if (name === '' || phone === '' || mail === '' || department === '' || semester === '' || !mail.endsWith('@gecwyd.ac.in')) {
-            alert('Please fill all the fields properly.');
+            setMessage("Please fill all the fields correctly.");
+            setShowError(true);
+
+            setIsLoading(false);
+
             return;
         }
 
@@ -59,7 +63,9 @@ const GroupRegistrationForm = () => {
 
         setIsLoading(false);
 
+
     }
+
 
     return (
         <>
@@ -75,15 +81,20 @@ const GroupRegistrationForm = () => {
                 <div className="form-control">
                     <label className="label cursor-pointer flex flex-row flex-wrap">
                         {groupEvents.map((event, index) => (
-                            <div key={index} className="flex flex-row justify-between items-center w-72">
-                                <span className="label-text p-2">{event}</span>
+                            <div key={`ld${index}`} className="flex flex-row justify-between items-center w-72">
+                                {/* Similarly, generate a unique ID for each input */}
+                                <label key={`ll${index}`} htmlFor={`literacy-${index}`} className="label-text p-2 cursor-pointer">{event}</label>
+
                                 <input
+                                    key={`li${index}`}
+                                    id={`literacy-${index}`} // Ensure this results in a unique ID
                                     type="checkbox"
                                     value={event}
                                     checked={selectedGroupEvents.includes(event)}
                                     onChange={handleIndividualCheck}
                                     className="checkbox"
                                 />
+                                {/* Link the label to the input */}
                             </div>
                         ))}
 
