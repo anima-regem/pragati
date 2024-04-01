@@ -13,7 +13,7 @@ const links = [
   },
   {
     label: "Events",
-    url: "/register",
+    url: "/events",
   },
   {
     label: "Guest",
