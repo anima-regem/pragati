@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="h-screen w-screen flex flex-col justify-center items-start ml-2 lg:ml-32 sm:ml-0 md:ml-0">
         <span className="">
           <h1 className="text-lg text-white font-bold m-5 lg:text-3xl">
-            libreated union presents
+            liberated union presents
           </h1>
           <h1 className="text-3xl text-white font-black m-5 lg:text-8xl">
             PRAGATI'24
