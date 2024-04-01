@@ -13,15 +13,15 @@ const Contact = () => {
                         <p className='text-md text-white opacity-75 font-light m-5 w-full lg:w-1/4'>
                             For any queries, feel free to contact us at
                             <br />
-                            Email : <a href='mailto:' className="text-black">xyz@gmail.com</a>
+                            Email : <a href='mailto:pragati2024lead@gmail.com' className="text-black">pragati2024lead@gmail.com</a>
                             <br />
                             or
                             <br />
-                            Contact Mr XYZ
+                            Contact Farshan Yoosuf
                             <br />
-                            Phone : <a href='tel:' className="text-black">1234567890</a>
+                            Phone : <a href='tel:+917510388907' className="text-black">+91 75103 88907</a>
                             <br />
-                            Whatsapp : <a href='https://wa.me/1234567890' className="text-black">1234567890</a>
+                            Whatsapp : <a href='https://wa.me/+917510388907' className="text-black">+91 75103 88907</a>
 
                         </p>
 
