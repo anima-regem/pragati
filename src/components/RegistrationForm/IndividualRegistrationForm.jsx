@@ -85,7 +85,15 @@ const IndividualRegistrationForm = () => {
                 <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="Name (in CAPs)" className="input w-full max-w-xs bg-[#2D2D2D] mt-5 mb-5" />
                 <input type="phone" value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="Phone" className="input w-full max-w-xs bg-[#2D2D2D] mb-5" />
                 <input type="email" value={mail} onChange={(e) => setMail(e.target.value)} placeholder="College Mail" className="input w-full max-w-xs bg-[#2D2D2D] mb-5" />
-                <input type="text" value={department} onChange={(e) => setDepartment(e.target.value)} placeholder="Department" className="input w-full max-w-xs bg-[#2D2D2D] mb-5" />
+                <select className="select select-bordered input w-full max-w-xs bg-[#2D2D2D] mb-5" onChange={(e)=>setDepartment(e.target.value)}>
+                    <option disabled selected>Department</option>
+                    <option>ME</option>
+                    <option>EEE</option>
+                    <option>CEE</option>
+                    <option>ECE 1</option>
+                    <option>ECE 2</option>
+                    <option>CSE</option>
+                </select>                
                 <input type="number" placeholder="Semester" min={1} max={8} value={semester} onChange={(e) => setSemester(e.target.value)} className="input w-full max-w-xs bg-[#2D2D2D] mb-10" />
             </div>
             <div className="flex flex-col p-8 pt-0 w-full">

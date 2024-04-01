@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <main className="relative overflow-hidden h-screen">
       <div className='absolute overflow-hidden h-screen w-screen z-[-10] '>
-      <img src={backgroundImage} alt="" className="h-screen object-cover lg:h-auto lg:w-screen"/>
+        <img src={backgroundImage} alt="" className="h-screen object-cover lg:h-auto lg:w-screen" />
       </div>
       <div className="h-screen w-screen flex flex-col justify-center items-start ml-2 lg:ml-32 sm:ml-0 md:ml-0">
         <span className="">
