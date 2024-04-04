@@ -50,6 +50,7 @@ const individualEvents = [
   'MIMICRY',
   'MONO ACT (MALE)',
   'MONO ACT (FEMALE)',
+  'STAND UP COMEDY',
   'FANCY DRESS',
   'KATHAK',
   'KOODIYATTAM',
@@ -67,7 +68,8 @@ const individualEvents = [
   'KERALA NADANAM (FEMALE)',
   'MOHINIYATTAM',
   'CHAKYARKOOTHU',
-  'NANGYARKOOTHU'
+  'NANGYARKOOTHU',
+  'SPOT CHOREOGRAPHY DANCE (SOLO)',
 ];
 
 const literacyEvents = [
@@ -108,7 +110,9 @@ const groupEvents = [
   'FOLK SONG (7 NOS)',
   'VANCHIPPATTU (10 NOS)',
   'PATRIOTIC SONG (7 NOS)',
-  'GROUP DANCE (10 NOS)',
+  'GANAMELA',
+  'WESTERN GROUP DANCE (10 NOS)',
+  'CLASSICAL GROUP DANCE (10 NOS)',
   'THIRUVATHIRA (10 NOS)',
   'OPPANA (10 NOS)',
   'MARGAMKALI (7 NOS)',
@@ -123,7 +127,8 @@ const groupEvents = [
   'KATHAPRASANGAM (1+3 NOS)',
   'SKIT (7 NOS)',
   'DRAMA (10 NOS)',
-  'NADAKAM (10 NOS)'
+  'NADAKAM (10 NOS)',
+  'DUET DANCE (2 NOS)'
 ];
 
 export { individualEvents, literacyEvents, groupEvents };

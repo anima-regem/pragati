@@ -4,7 +4,6 @@ import axios from "axios";
 
 const IndividualRegistrationForm = () => {
     const [selectedIndividualEvents, setSelectedIndividualEvents] = useState([]);
-    const [selectedLiteracyEvents, setSelectedLiteracyEvents] = useState([]);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [mail, setMail] = useState('');
@@ -28,15 +27,6 @@ const IndividualRegistrationForm = () => {
         }
     }
 
-    const handleLiteracyCheck = (e) => {
-        const event = e.target.value;
-        if (e.target.checked) {
-            setSelectedLiteracyEvents([...selectedLiteracyEvents, event]);
-        } else {
-            setSelectedLiteracyEvents(selectedLiteracyEvents.filter(item => item !== event));
-        }
-    }
-
     const handleSubmit = async (e) => {
         e.preventDefault(); // Prevent the form from submitting traditionally
         setIsLoading(true);
@@ -57,7 +47,7 @@ const IndividualRegistrationForm = () => {
             mail,
             department,
             semester,
-            events: [...selectedIndividualEvents, ...selectedLiteracyEvents].join(',')
+            events: [...selectedIndividualEvents].join(',')
         }).toString();
 
         const requestURL = `https://script.google.com/macros/s/AKfycbwSyzqogYuGSdz-2LxI-qKnT8VNTix98URC3Su0YCKrMnB3pK-pd6ciyKRUlCTS20_JyQ/exec?${queryParams}`;
@@ -127,8 +117,8 @@ const IndividualRegistrationForm = () => {
                                     id={`literacy-${index}`} // Ensure this results in a unique ID
                                     type="checkbox"
                                     value={event}
-                                    checked={selectedLiteracyEvents.includes(event)}
-                                    onChange={handleLiteracyCheck}
+                                    checked={selectedIndividualEvents.includes(event)}
+                                    onChange={handleIndividualCheck}
                                     className="checkbox"
                                 />
                                 {/* Link the label to the input */}
