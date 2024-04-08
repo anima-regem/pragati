@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import IndividualRegistrationForm from './IndividualRegistrationForm';
 import GroupRegistrationForm from './GroupRegistrationForm';
+import LiteracyRegistrationForm from './LiteracyRegistrationForm';
 
 const RegistrationBase = () => {
     const [selected, setSelected] = useState('individual');
@@ -9,13 +10,21 @@ const RegistrationBase = () => {
 
     return (
         <>
-            <div className='flex flex-row justify-center items-center m-auto'>
+            <div className='flex flex-row justify-center items-center m-auto flex-wrap'>
                 <button
                     className={`btn rounded-full w-32 ${selected === 'individual' ? 'bg-red-500' : 'bg-[#2D2D2D]'
                         } text-white m-2`}
                     onClick={() => setSelected('individual')}
                 >
                     Individual
+                </button>
+
+                <button
+                    className={`btn rounded-full w-32 ${selected === 'literacy' ? 'bg-red-500' : 'bg-[#2D2D2D]'
+                        } text-white m-2`}
+                    onClick={() => setSelected('literacy')}
+                >
+                    Literacy
                 </button>
 
                 <button
@@ -29,6 +38,7 @@ const RegistrationBase = () => {
 
             <div className='registration__form__container'>
                 {selected === 'individual' && <IndividualRegistrationForm />}
+                {selected === 'literacy' && <LiteracyRegistrationForm />}
                 {selected === 'group' && <GroupRegistrationForm />}
 
             </div>

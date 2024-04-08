@@ -1,9 +1,9 @@
-import { individualEvents } from "../../utils/constants";
+import { literacyEvents } from "../../utils/constants";
 import { useState } from 'react';
 import axios from "axios";
 
-const IndividualRegistrationForm = () => {
-    const [selectedIndividualEvents, setSelectedIndividualEvents] = useState([]);
+const LiteracyRegistrationForm = () => {
+    const [selectedLiteracyEvents, setSelectedLiteracyEvents] = useState([]);
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [mail, setMail] = useState('');
@@ -13,17 +13,17 @@ const IndividualRegistrationForm = () => {
     const [message, setMessage] = useState('');
     const [showError, setShowError] = useState(false);
 
-    const handleIndividualCheck = (e) => {
+    const handleLiteracyCheck = (e) => {
         const event = e.target.value;
         if (e.target.checked) {
-            if (selectedIndividualEvents.length < 5) {
-                setSelectedIndividualEvents([...selectedIndividualEvents, event]);
+            if (selectedLiteracyEvents.length < 5) {
+                setSelectedLiteracyEvents([...selectedLiteracyEvents, event]);
             } else {
                 e.preventDefault();
                 document.getElementById('show_error').showModal();
             }
         } else {
-            setSelectedIndividualEvents(selectedIndividualEvents.filter(item => item !== event));
+            setSelectedLiteracyEvents(selectedLiteracyEvents.filter(item => item !== event));
         }
     }
 
@@ -47,7 +47,7 @@ const IndividualRegistrationForm = () => {
             mail,
             department,
             semester,
-            events: [...selectedIndividualEvents].join(',')
+            events: [...selectedLiteracyEvents].join(',')
         }).toString();
 
         const requestURL = `https://script.google.com/macros/s/AKfycbwSyzqogYuGSdz-2LxI-qKnT8VNTix98URC3Su0YCKrMnB3pK-pd6ciyKRUlCTS20_JyQ/exec?${queryParams}`;
@@ -90,18 +90,18 @@ const IndividualRegistrationForm = () => {
                 {/* Input fields */}
                 <div className="form-control">
                     <label className="label cursor-pointer flex flex-row flex-wrap">
-                        {individualEvents.map((event, index) => (
+                        {literacyEvents.map((event, index) => (
                             <div key={`id${index}`} className="flex flex-row justify-between items-center w-72">
                                 {/* Generate a unique ID for each input using the event name and index */}
-                                <label key={`il${index}`} htmlFor={`individual-${index}`} className="label-text p-2 cursor-pointer">{event}</label>
+                                <label key={`il${index}`} htmlFor={`Literacy-${index}`} className="label-text p-2 cursor-pointer">{event}</label>
 
                                 <input
                                     key={`ii${index}`}
-                                    id={`individual-${index}`} // Ensure this results in a unique ID
+                                    id={`Literacy-${index}`} // Ensure this results in a unique ID
                                     type="checkbox"
                                     value={event}
-                                    checked={selectedIndividualEvents.includes(event)}
-                                    onChange={handleIndividualCheck}
+                                    checked={selectedLiteracyEvents.includes(event)}
+                                    onChange={handleLiteracyCheck}
                                     className="checkbox"
                                 />
                                 {/* Use htmlFor to link the label to the input */}
@@ -124,10 +124,10 @@ const IndividualRegistrationForm = () => {
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
                     </form>
                     <h3 className="font-bold text-lg">Limit Reached</h3>
-                    <p className="py-4">You can only select a maximum of 5 individual events.<br />
+                    <p className="py-4">You can only select a maximum of 5 Literacy events.<br />
                         Please deselect an event to select a new one.<br /><br />
                         You have selected the following events:<br />
-                        {selectedIndividualEvents.map((event, index) => (
+                        {selectedLiteracyEvents.map((event, index) => (
                             <>
                                 <span key={index} className="pl-4 pr-4 pt-2 pb-2 badge badge-outline h-auto m-1 ml-0">{event}</span>
                                 <br />
@@ -165,4 +165,4 @@ const IndividualRegistrationForm = () => {
     );
 }
 
-export default IndividualRegistrationForm;
+export default LiteracyRegistrationForm;
