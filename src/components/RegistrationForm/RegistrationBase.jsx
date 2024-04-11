@@ -16,7 +16,7 @@ const RegistrationBase = () => {
                 Registrations are now closed
                 */
             }
-            <div className="flex flex-col justify-center items-center h-screen">
+            <div className="flex flex-col justify-center items-center h-screen p-8">
                 <h1 className="text-3xl font-bold">Registrations are now closed</h1>
             </div>
 
