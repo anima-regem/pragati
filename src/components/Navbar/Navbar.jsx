@@ -16,8 +16,8 @@ const links = [
     url: "/events",
   },
   {
-    label: "Guest",
-    url: "/",
+    label: "Leaderboard",
+    url: "/leaderboard",
   },
 ];
 
@@ -88,9 +88,9 @@ const Navbar = () => {
             />
           ))}
 
-          <Link to="/register" className="reg mt-5 ml-5">
-            Register Now <i className="fas fa-arrow-right"></i>
-          </Link>
+          {/* <Link to="/leaderboard" className="reg mt-5 ml-5">
+            Leaderboard <i className="fas fa-arrow-right"></i>
+          </Link> */}
 
         </div>
 

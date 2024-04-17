@@ -1,8 +1,4 @@
-
-import { useState } from 'react';
-import IndividualRegistrationForm from './IndividualRegistrationForm';
-import GroupRegistrationForm from './GroupRegistrationForm';
-import LiteracyRegistrationForm from './LiteracyRegistrationForm';
+import { Link } from 'react-router-dom';
 
 const RegistrationBase = () => {
     // const [selected, setSelected] = useState('individual');
@@ -18,6 +14,11 @@ const RegistrationBase = () => {
             }
             <div className="flex flex-col justify-center items-center h-screen p-8">
                 <h1 className="text-3xl font-bold">Registrations are now closed</h1>
+
+                {/* Check out leaderboard here */}
+                <Link to="/register" className="reg mt-5 ">
+                    Leaderboard <i className="fas fa-arrow-right"></i>
+                </Link>
             </div>
 
             {/* <div className='flex flex-row justify-center items-center m-auto flex-wrap'>

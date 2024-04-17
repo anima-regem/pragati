@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage";
 import Layout from "./components/Layout";
 import Registration from "./pages/Registration";
 import EventsPage from "./pages/EventsPage";
+import Leaderboard from "./pages/Leaderboard";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Registration />,
+      },
+      {
+        path: "/leaderboard",
+        element: <Leaderboard />,
       },
       {
         path: "/events",

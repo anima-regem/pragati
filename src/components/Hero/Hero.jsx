@@ -20,8 +20,8 @@ const Hero = () => {
             APRIL 18 | 19 | 20
           </h2>
         </span>
-        <Link to="/register" className="reg mt-5 ml-5 ">
-          Register Now <i className="fas fa-arrow-right"></i>
+        <Link to="/leaderboard" className="reg mt-5 ml-5 ">
+          Leaderboard <i className="fas fa-arrow-right"></i>
         </Link>
       </div>
     </main>
