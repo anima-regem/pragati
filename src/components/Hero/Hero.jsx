@@ -20,9 +20,9 @@ const Hero = () => {
             APRIL 18 | 19 | 20
           </h2>
         </span>
-        <Link to="/leaderboard" className="reg mt-5 ml-5 ">
-          Leaderboard <i className="fas fa-arrow-right"></i>
-        </Link>
+        <div className="reg mt-5 ml-5 " onClick={()=>window.open("https://drive.google.com/drive/folders/1XQ0h_IaAfKm5y29VNC6OoCeNnbEH_vgC?usp=sharing", "_blank")}>
+          Certificates <i className="fas fa-arrow-right"></i>
+        </div>
       </div>
     </main>
   );
